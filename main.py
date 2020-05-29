@@ -1,4 +1,4 @@
-import giraffa_tools as gt
+from modules import giraffa_tools as gt
 
 # Test character
 my_character = gt.get_character()
