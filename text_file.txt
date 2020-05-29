@@ -1,6 +1,0 @@
-
-this is my sample
-of text file
-in python.
-my mission here is open,
-write and read this thing.
