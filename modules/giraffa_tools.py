@@ -1,3 +1,6 @@
+from collections import namedtuple
+
+
 def get_data_with_pagination():
     data = []
     limit_result = 100
@@ -55,3 +58,12 @@ def output_file_content(file_name):
         print(text)
 
     text_file.close()
+
+
+def get_cards():
+    ranks = [str(rank) for rank in range(2, 11)] + list("JQKA")
+    suits = "paus ouros copas espadas".split()
+
+    Card = namedtuple("Card", ["suit",  "rank"])
+    cards = [Card(suit=suit, rank=rank) for suit in suits for rank in ranks]
+    return cards

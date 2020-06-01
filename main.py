@@ -1,3 +1,5 @@
+from random import choice
+
 from flask import Flask, json
 from markupsafe import escape
 from modules import giraffa_tools as gt
@@ -19,6 +21,11 @@ def login():
 @app.route('/user/<username>')
 def profile(username):
     return '{}\'s profile'.format(escape(username))
+
+
+@app.route('/card')
+def card():
+    return json.dumps(choice(gt.get_cards()))
 
 
 if __name__ == "__main__":
