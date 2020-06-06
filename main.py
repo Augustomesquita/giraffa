@@ -47,6 +47,10 @@ if __name__ == "__main__":
     # Test text file reading
     gt.output_file_content("text_file.txt")
 
+    #  Teste f-string to format a float output
+    float_value = 10 / 3
+    print(f'{float_value:7.2f}')
+
     # Test a simple Rest API
     app.run()
 
