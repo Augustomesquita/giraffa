@@ -51,6 +51,30 @@ if __name__ == "__main__":
     float_value = 10 / 3
     print(f'{float_value:7.2f}')
 
+    uma_lista = [1, 2, 3]
+    uma_tupla_ou_seja_imutavel = (1, 2, 3)
+    um_set_ou_seja_valores_unicos = {1, 1, 1, 2, 2, 3, 4, 4}
+
+    # Duck type testing
+    print("uma_lista")
+    print(uma_lista)
+
+    print("uma_tupla_ou_seja_imutavel")
+    print(uma_tupla_ou_seja_imutavel)
+
+    print("um_set_ou_seja_valores_unicos")
+    print(um_set_ou_seja_valores_unicos)
+
+    print(
+        "\n\nVarrendo um objeto que possui uma lista, apenas referenciado o "
+        "proprio objetvo atraves do `Duck Typing` __getitem__"
+        " e __len__, os quais nos permite indicar que nossa classe pode se comportar como uma lista")
+    playlist = Playlist(nome="Tibia", musicas=["Rap", "Classic"])
+    print(f"Tamanho da playlist: {len(playlist)}")
+    for song in playlist:
+        print(f"- {song}")
+
+
     # Test a simple Rest API
     app.run()
 
